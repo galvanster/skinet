@@ -23,8 +23,10 @@
     "font-awesome": "^4.7.0",
     "ngx-bootstrap": "^8.0.0",
     "ngx-toastr": "^14.3.0",
+    "params-xng-breadcrumb": "^5.0.6",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
+    "xng-breadcrumb": "^8.0.2",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
@@ -34,7 +36,7 @@
     "@angular-eslint/eslint-plugin-template": "13.5.0",
     "@angular-eslint/schematics": "13.5.0",
     "@angular-eslint/template-parser": "13.5.0",
-    "@angular/cli": "~13.3.8",
+    "@angular/cli": "^14.2.7",
     "@angular/compiler-cli": "~13.3.0",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
