@@ -1,0 +1,13 @@
+global using Infrastructure.Data;
+global using Microsoft.AspNetCore.Hosting;
+global using Microsoft.Extensions.Hosting;
+global using Microsoft.Extensions.Logging;
+global using Microsoft.EntityFrameworkCore;
+global using System;
+global using Microsoft.Extensions.DependencyInjection;
+global using System.Threading.Tasks;
+global using Microsoft.AspNetCore.Builder;
+global using API.Extensions;
+global using Microsoft.Extensions.Configuration;
+global using API.Middleware;
+global using API.Helpers;
