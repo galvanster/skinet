@@ -1,9 +1,8 @@
-import { IProduct } from "./product";
+import { Product } from './product';
 
-
-export interface IPagination {
-    pageIndex: number;
-    pageSize: number;
-    count: number;
-    data: IProduct[];
-  }
+export interface Pagination {
+  pageIndex: number;
+  pageSize: number;
+  count: number;
+  data: Product[];
+}

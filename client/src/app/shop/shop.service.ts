@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { IPagination } from '../shared/models/pagination';
-import { IBrand } from '../shared/models/brand';
-import { IType } from '../shared/models/productType';
+import { Pagination } from '../shared/models/pagination';
+import { Brand } from '../shared/models/brand';
+import { Type } from '../shared/models/productType';
 import { delay, map } from 'rxjs';
 import { ShopParams } from '../shared/models/shopParams';
-import { IProduct } from '../shared/models/product';
+import { Product } from '../shared/models/product';
 
 @Injectable({
   providedIn: 'root',
@@ -35,7 +35,7 @@ export class ShopService {
     params = params.append('pageIndex', shopParams.pageSize.toString());
 
     return this.http
-      .get<IPagination>(this.baseUrl + 'products', {
+      .get<Pagination>(this.baseUrl + 'products', {
         observe: 'response',
         params,
       })
@@ -47,14 +47,14 @@ export class ShopService {
   }
 
   getProduct(id: number) {
-    return this.http.get<IProduct>(this.baseUrl + 'products/' + id);
+    return this.http.get<Product>(this.baseUrl + 'products/' + id);
   }
 
   getBrands() {
-    return this.http.get<IBrand[]>(this.baseUrl + 'products/brands');
+    return this.http.get<Brand[]>(this.baseUrl + 'products/brands');
   }
 
   getTypes() {
-    return this.http.get<IType[]>(this.baseUrl + 'products/types');
+    return this.http.get<Type[]>(this.baseUrl + 'products/types');
   }
 }
