@@ -1,13 +1,16 @@
 
+using Core.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // add services to the container
            builder.Services.AddAutoMapper(typeof(MappingProfiles));
            builder.Services.AddControllers();
+           builder.Services.AddApplicationServices(builder.Configuration);
            builder.Services.AddDbContext<StoreContext>(x =>
              x.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-             builder.Services.AddApplicationServices();
+            // builder.Services.AddApplicationServices();
              builder.Services.AddSwaggerDocumentation();
              builder.Services.AddCors(opt =>
              {
